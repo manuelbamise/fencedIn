@@ -3,9 +3,9 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>Home</li>
+      <nav >
+        <ul className=" border border-solid">
+          <li className="text-blue-800">Home</li>
           <li>About Us</li>
           <li>Testimonials</li>
           <li>Contact</li>
@@ -75,8 +75,18 @@ const App = () => {
         </section>
       </main>
       <footer>
-        <h2>fencedIn</h2>
-        {/* Continue with the designs fo fencedIn */}
+        <section>
+          <h2>fencedIn</h2>
+          <ul>
+            <li>facebook</li>
+            <li>instagram</li>
+            <li>twitter/X</li>
+          </ul>
+        </section>
+        <section>
+          <a href="mailto:">support@fencedIn.com</a>
+          <a href="tel:+">Contact us</a>
+        </section>
       </footer>
     </>
   );
