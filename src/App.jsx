@@ -3,17 +3,32 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <nav >
-        <ul className=" border border-solid">
-          <li className="text-blue-800">Home</li>
-          <li>About Us</li>
-          <li>Testimonials</li>
-          <li>Contact</li>
+      <nav className=" border bg-lime-500  border-green-500 items-center flex justify-center uppercase h-16">
+        <ul className=" border border-solid flex align-center justify-between w-[52%] px-4 text-xl">
+          <a href="" className="navLink">
+            Home
+          </a>
+          <a href="" className="navLink">
+            About Us
+          </a>
+          <a href="" className="navLink">
+            Testimonials
+          </a>
+          <a href="" className="navLink">
+            Contact
+          </a>
         </ul>
       </nav>
-      <header>
-        <h1>fencedIn</h1>
-        <p>Quality security fences for farmers</p>
+      <header className="bg-teal-400">
+        <section>
+          <h1 className="text-9xl ">fencedIn</h1>
+          <p>Quality security fences for farmers</p>
+        </section>
+        <section>
+          <button>
+            <a href="">Welcome</a>
+          </button>
+        </section>
       </header>
       <main>
         <h2>About Us</h2>

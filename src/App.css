@@ -1,3 +1,14 @@
-body{
-  background: cadetblue;
+.navLink:hover{
+  background: rgb(52, 85, 1);
+  border-radius: 13px;
+  color: white;
+}
+.navLink:focus{
+  border: 2px solid black;
+
+}
+
+.navLink{
+  padding: 8px;
+  outline: 2px solid black;
 }
