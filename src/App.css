@@ -11,3 +11,9 @@
   padding: 8px;
   /* outline: 2px solid black; */
 }
+
+.pageLogo{
+  background-size: cover;
+  background-image: url(./assets/pic5.jpg);
+  background-repeat: no-repeat;
+}
