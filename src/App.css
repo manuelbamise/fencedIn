@@ -1,6 +1,5 @@
 .navLink:hover{
   background: rgb(52, 85, 1);
-  border-radius: 13px;
   color: white;
 }
 .navLink:focus{
@@ -10,5 +9,5 @@
 
 .navLink{
   padding: 8px;
-  outline: 2px solid black;
+  /* outline: 2px solid black; */
 }

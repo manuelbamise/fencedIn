@@ -3,31 +3,34 @@ import "./App.css";
 const App = () => {
   return (
     <>
-      <nav className=" border bg-lime-500  border-green-500 items-center flex justify-center uppercase h-16">
-        <ul className=" border border-solid flex align-center justify-between w-[52%] px-4 text-xl">
-          <a href="" className="navLink">
+      <nav className="bg-lime-500 items-center flex justify-center uppercase h-16">
+        <ul className="  flex align-center justify-between w-[52%] px-4 text-xl">
+          <a href="" className="navLink hover:rounded-md">
             Home
           </a>
-          <a href="" className="navLink">
+          <a href="" className="navLink hover:rounded-md">
             About Us
           </a>
-          <a href="" className="navLink">
+          <a href="" className="navLink hover:rounded-md">
             Testimonials
           </a>
-          <a href="" className="navLink">
+          <a href="" className="navLink hover:rounded-md">
             Contact
           </a>
         </ul>
       </nav>
       <header className="bg-teal-400">
-        <section>
+        <section className="px-4">
           <h1 className="text-9xl ">fencedIn</h1>
-          <p>Quality security fences for farmers</p>
+          <p className="text-3xl ">Quality and Secure fences for farmers</p>
         </section>
-        <section>
-          <button>
-            <a href="">Welcome</a>
-          </button>
+        <section className="flex items-center justify-center p-2">
+          <a
+            href=""
+            className=" border p-2 text-xl rounded ring hover:bg-teal-800 hover:rounded-none hover:text-white"
+          >
+            Welcome
+          </a>
         </section>
       </header>
       <main>
