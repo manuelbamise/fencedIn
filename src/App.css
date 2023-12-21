@@ -14,6 +14,20 @@
 
 .pageLogo{
   background-size: cover;
-  background-image: url(./assets/pic5.jpg);
+  background-image: url(./assets/Emblem/pic5.jpg);
   background-repeat: no-repeat;
+}
+
+
+
+.testimonialCard{
+  border: 2px solid black;
+  width: 15rem;
+  border-radius: 5px;
+}
+.testimonialCardInfo{
+  display: none;
+}
+.testimonialCardInfoshow{
+  display: block;
 }

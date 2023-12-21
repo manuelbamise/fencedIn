@@ -1,4 +1,5 @@
 import "./App.css";
+import TestimonialCard from "./components/TestimonialCard";
 
 const App = () => {
   return (
@@ -79,15 +80,10 @@ const App = () => {
         </section>
         <section>
           <h3 className="text-2xl text-center">Testimonials</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Dignissimos molestiae eum voluptatibus ex accusantium provident
-            facere ad culpa, dolores deleniti nostrum ipsum rem, omnis eveniet
-            consequuntur natus repellat vitae perferendis. Eius, quis laboriosam
-            asperiores nostrum perspiciatis itaque porro fuga saepe ab qui
-            quidem, harum, minima officiis? Temporibus unde aut culpa provident,
-            at pariatur est eius, praesentium dicta iusto enim ipsa.
-          </p>
+          <div className="border border-black flex justify-center mx-10 items-center">
+            {/* <TestimonialCard /> */}
+            
+          </div>
         </section>
         <section>
           <h3>Q/A</h3>
