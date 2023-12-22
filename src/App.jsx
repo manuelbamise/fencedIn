@@ -1,5 +1,5 @@
 import "./App.css";
-import TestimonialCard from "./components/TestimonialCard";
+// import TestimonialCard from "./components/TestimonialCard";
 
 const App = () => {
   return (
