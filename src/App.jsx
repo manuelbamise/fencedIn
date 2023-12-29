@@ -1,5 +1,5 @@
 import "./App.css";
-// import TestimonialCard from "./components/TestimonialCard";
+import TestimonialCard from "./components/TestimonialCard";
 
 const App = () => {
   return (
@@ -81,7 +81,7 @@ const App = () => {
         <section>
           <h3 className="text-2xl text-center">Testimonials</h3>
           <div className="border border-black flex justify-center mx-10 items-center">
-            {/* <TestimonialCard /> */}
+            {<TestimonialCard/> ? 'Yes it is here' : 'NO'}
             
           </div>
         </section>
