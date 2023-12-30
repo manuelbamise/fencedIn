@@ -1,5 +1,6 @@
 import "./App.css";
 import TestimonialCard from "./components/TestimonialCard";
+import QuestionRow from './components/QuestionRow';
 
 const App = () => {
   return (
@@ -81,17 +82,13 @@ const App = () => {
         <section>
           <h3 className="text-2xl text-center">Testimonials</h3>
           <div className="border border-black flex justify-center mx-10 items-center">
-            {<TestimonialCard/> ? 'Yes it is here' : 'NO'}
-            
+            <TestimonialCard />
           </div>
         </section>
-        <section>
-          <h3>Q/A</h3>
-          <ul>
-            <li>
-              qusetion <br />
-              <i>answer</i>
-            </li>
+        <section className="border mt-3 border-black">
+          <h3 className="text-center text-2xl">Q/A</h3>
+          <ul className="flex  justify-center outline outline-black">
+            <QuestionRow/>
           </ul>
         </section>
       </main>
