@@ -1,6 +1,7 @@
 .navLink:hover {
   background: rgb(52, 85, 1);
   color: white;
+  /* #00fd00 */
 }
 .navLink:focus {
   border: 2px solid black;
