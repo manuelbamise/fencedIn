@@ -87,8 +87,9 @@ const App = () => {
         </section>
         <section className="border mt-3 border-black">
           <h3 className="text-center text-2xl">Q/A</h3>
-          <ul className="flex  justify-center outline outline-black">
+          <ul className="flex flex-col justify-center item-center outline outline-black">
             <QuestionRow/>
+            <QuestionRow/>            
           </ul>
         </section>
       </main>

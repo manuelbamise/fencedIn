@@ -14,12 +14,12 @@
 
 .pageLogo {
   background-size: cover;
-  background-image: url(./assets/Emblem/pic5.jpg);
+  background-image: url(./assets/images/pic5.jpg);
   background-repeat: no-repeat;
 }
 
 .testimonialCard {
-  background: url(./assets/Emblem/pic4.jpg);
+  background: url(./assets/images/pic4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 17rem;
@@ -40,4 +40,12 @@
   justify-content: space-between;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+}
+
+
+.hide{
+  display: none;
+}
+.cardShow{
+  display: block;
 }
