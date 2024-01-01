@@ -1,11 +1,13 @@
 import "./App.css";
 import TestimonialCard from "./components/TestimonialCard";
-import QuestionRow from './components/QuestionRow';
+import QuestionRow from "./components/QuestionRow";
 
 const App = () => {
+  // const nav = document.getElementsByClassName("navLink");
+  
   return (
     <>
-      <nav className="bg-lime-500 items-center flex justify-center uppercase h-16">
+      <nav className=" bg-stapleGreen items-center flex justify-center uppercase h-16">
         <ul className="  flex align-center justify-between w-[52%] px-4 text-xl">
           <a href="" className="navLink hover:rounded-md">
             Home
@@ -24,14 +26,14 @@ const App = () => {
       <header className="bg-teal-400 pageLogo h-[45rem] w-[100%] flex flex-col justify-around">
         <section className="px-4 text-right">
           <h1 className="text-9xl ">
-            fenced<span className="text-lime-500">In</span>
+            fenced<span className="text-stapleGreen">In</span>
           </h1>
           <p className="text-3xl ">Quality and Secure fences for farmers</p>
         </section>
         <section className="flex items-center justify-center p-2">
           <a
             href="#aboutSection"
-            className=" border border-lime-500 p-2 text-xl hover:rounded hover:ring bg-black text-lime-500 hover:ring-black hover:bg-lime-500  hover:text-white"
+            className=" border border-white p-2 text-xl hover:rounded hover:ring bg-black text-stapleGreen hover:ring-black hover:bg-stapleGreen  hover:text-white"
           >
             Welcome
           </a>
@@ -85,26 +87,33 @@ const App = () => {
             <TestimonialCard />
           </div>
         </section>
-        <section className="border mt-3 border-black">
-          <h3 className="text-center text-2xl">Q/A</h3>
-          <ul className="flex flex-col justify-center item-center outline outline-black">
-            <QuestionRow/>
-            <QuestionRow/>            
+        <section className="border mt-3 border-black h-[15rem]">
+          <h3 className="text-center text-2xl h-[20%]">Q/A</h3>
+          <ul className=" py-2 flex flex-col items-center justify-between outline outline-black h-[80%]">
+            <QuestionRow />
+            <QuestionRow />
           </ul>
         </section>
       </main>
-      <footer>
-        <section>
-          <h2>fencedIn</h2>
+      <footer className="outline outline-blue-800 bg-black text-stapleGreen flex justify-between">
+        <section className=" border border-white w-[50%]">
+          <h2 className="text-3xl">fencedIn</h2>
           <ul>
             <li>facebook</li>
             <li>instagram</li>
             <li>twitter/X</li>
           </ul>
         </section>
-        <section>
-          <a href="mailto:">support@fencedIn.com</a>
-          <a href="tel:+">Contact us</a>
+        <section className=" border flex flex-col justify-end text-right border-black w-[50%]">
+          <div>
+            Send us an email:
+            <i>
+              <a href="mailto:">support@fencedIn.com</a>
+            </i>
+          </div>
+          <div>
+            Contact us <a href="tel:+">000-45-FENCEDIN</a>
+          </div>
         </section>
       </footer>
     </>

@@ -1,14 +1,10 @@
-// import { useState } from "react";
-const showAnswer = () => {
-  let answer = document.querySelector(".answer");
-  if((answer.classList.contains("cardShow")) == false){
-    answer.classList.add("cardShow");
-  }else{
-    answer.classList.remove("cardShow");
-  }
-  //console.log(answer.classList.contains("cardShow"));
-};
+import { useState } from "react";
+import {  ArrowBarDown, ArrowBarUp } from "react-bootstrap-icons";
 const QuestionRow = () => {
+  const [isAnswerVisible,setIsAnswerVisible] = useState(false);
+  const showAnswer =()=>{
+    setIsAnswerVisible(!isAnswerVisible);
+  };
   return (
     <li className="border border-green-600 w-[60%] text-center">
       <div className="questionCard text-xl item-center border  border-red-600">
@@ -18,10 +14,10 @@ const QuestionRow = () => {
           className="w-[10%] px-2 hover:bg-blue-300 bg-blue-800 ring ring-blue"
           onClick={showAnswer}
         >
-          &dArr;
+          {isAnswerVisible ? <ArrowBarDown/>: <ArrowBarUp/> }
         </button>
       </div>
-      <div className="answer hide">3 to 4 weeks in US approved states</div>
+      <div className={`answer ${isAnswerVisible ? "block" : "hidden"}`} >3 to 4 weeks in US approved states</div>
     </li>
   );
 };

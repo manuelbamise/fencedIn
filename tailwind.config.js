@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend:{},
+    extend:{
+      colors:{
+        'stapleGreen':'#00fd00',
+        'hoverStaple':'#01d201'
+      }
+    },
   },
   plugins: [],
 }
