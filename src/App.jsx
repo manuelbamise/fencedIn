@@ -1,10 +1,11 @@
 import "./App.css";
 import TestimonialCard from "./components/TestimonialCard";
 import QuestionRow from "./components/QuestionRow";
+import { Facebook, Instagram, Twitter } from "react-bootstrap-icons";
 
 const App = () => {
   // const nav = document.getElementsByClassName("navLink");
-  
+
   return (
     <>
       <nav className=" bg-stapleGreen items-center flex justify-center uppercase h-16">
@@ -95,13 +96,19 @@ const App = () => {
           </ul>
         </section>
       </main>
-      <footer className="outline outline-blue-800 bg-black text-stapleGreen flex justify-between">
-        <section className=" border border-white w-[50%]">
-          <h2 className="text-3xl">fencedIn</h2>
-          <ul>
-            <li>facebook</li>
-            <li>instagram</li>
-            <li>twitter/X</li>
+      <footer className="bg-black text-stapleGreen flex justify-between">
+        <section className=" h-24 w-[50%]">
+          <h2 className="text-3xl h-[20%]">fencedIn</h2>
+          <ul className=" md:w-40 text-3xl p-4 h-[80%] flex items-end justify-between">
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <Facebook />
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <Instagram />
+            </a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <Twitter />
+            </a>
           </ul>
         </section>
         <section className=" border flex flex-col justify-end text-right border-black w-[50%]">
