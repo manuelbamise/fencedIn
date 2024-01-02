@@ -5,7 +5,6 @@ import { Facebook, Instagram, Twitter } from "react-bootstrap-icons";
 
 const App = () => {
   // const nav = document.getElementsByClassName("navLink");
-
   return (
     <>
       <nav className=" bg-stapleGreen items-center flex justify-center uppercase h-16">
