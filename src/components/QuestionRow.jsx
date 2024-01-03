@@ -11,7 +11,7 @@ const QuestionRow = () => {
 
 
   return (
-    <li className="border border-green-600 w-[60%] text-center">
+    <li className="rounded-md border border-green-600 w-[60%] text-center">
       <div className="questionCard text-xl items-center border  border-red-600">
         <div className="question">how long does shipping take?</div>
         <button
