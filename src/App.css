@@ -1,53 +1,5 @@
-.navLink:hover {
-  background:rgb(1, 210, 1);
-  color: white;
-  /* #00fd00 */
-}
-.navLink:focus {
-  border: 1px solid black;
-  background:#01d201;
-  color: white;
-}
-
-.navLink {
-  padding: 8px;
-  /* outline: 2px solid black; */
-}
-
-.pageLogo {
-  background-size: cover;
-  background-image: url(./assets/images/pic5.jpg);
-  background-repeat: no-repeat;
-}
-
-.testimonialCard {
-  background: url(./assets/images/pic4.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 17rem;
-  border: 2px solid black;
-  width: 13rem;
-  border-radius: 5px;
-}
-
-.cardInfo {
-  display: none;
-}
-
-.testimonialCard:hover > .cardInfo {
-  color: white;
-  display: block;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-
-.hide{
-  display: none;
-}
-.cardShow{
-  display: block;
+.background{
+    background: url(./assets/images/pic5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }

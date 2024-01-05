@@ -9,7 +9,7 @@ export default {
       colors:{
         'stapleGreen':'#00fd00',
         'hoverStaple':'#01d201'
-      }
+      },
     },
   },
   plugins: [],
