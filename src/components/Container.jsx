@@ -3,12 +3,24 @@ import TestimonialCard from "./microComponents/TestimonialCard";
 import QuestionRow from "./microComponents/QuestionRow";
 import { Facebook, Instagram, Twitter } from "react-bootstrap-icons";
 import OurWorkers from "./microComponents/OurWorkers";
+import workerRecords from "../assets/json/ourWorkers.json";
+import { useEffect, useState } from "react";
 
 const Container = () => {
+  const [workers, setWorkers] = useState([]);
+
+  // function Test() {
+  //   setWorkers(["josh"]);
+  //   useEffect(() => {
+  //     console.log(workers);
+  //   }, []);
+  // }
+  
+
   return (
     <>
       {/* navigation bar */}
-      <nav className=" bg-stapleGreen items-center flex justify-center uppercase h-16">
+      <nav className="  items-center flex justify-center uppercase h-16">
         <ul className="  flex align-center justify-between w-[52%] px-4 text-xl">
           <a href="" className="navLink hover:rounded-md">
             Home
@@ -24,6 +36,7 @@ const Container = () => {
           </a>
         </ul>
       </nav>
+
       {/* Header with the hero image */}
       <header className="bg-teal-400 pageLogo h-[45rem] w-[100%] flex flex-col justify-around">
         <section className="px-4 text-right">
@@ -41,7 +54,6 @@ const Container = () => {
           </a>
         </section>
       </header>
-      <OurWorkers/>
       <main className="mt-4">
         {/* First About section */}
         <h2
@@ -56,6 +68,23 @@ const Container = () => {
           expedita illo soluta commodi esse voluptatibus quidem sapiente qui
           aut, nihil nemo placeat laborum.
         </p>
+        <section>
+          <h4 className="text-center text-2xl border">Meet the team</h4>
+          <div className="flex justify-center items-center border border-black">
+            {workerRecords &&
+              workerRecords.map((workerRecord) => {
+                return (
+                  <div key={workerRecord.id} className="mx-4">
+                    <OurWorkers
+                      name={workerRecord.Name}
+                      comment={workerRecord.comment}
+                    />
+                  </div>
+                );
+              })}
+          </div>
+        </section>
+
         <section className="flex px-3 mb-3">
           <section>
             {/* mission section */}
