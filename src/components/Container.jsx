@@ -9,18 +9,11 @@ import { useEffect, useState } from "react";
 const Container = () => {
   const [workers, setWorkers] = useState([]);
 
-  // function Test() {
-  //   setWorkers(["josh"]);
-  //   useEffect(() => {
-  //     console.log(workers);
-  //   }, []);
-  // }
-  
 
   return (
     <>
       {/* navigation bar */}
-      <nav className="  items-center flex justify-center uppercase h-16">
+      <nav className=" bg-black text-white items-center flex justify-center uppercase h-16">
         <ul className="  flex align-center justify-between w-[52%] px-4 text-xl">
           <a href="" className="navLink hover:rounded-md">
             Home
@@ -68,13 +61,13 @@ const Container = () => {
           expedita illo soluta commodi esse voluptatibus quidem sapiente qui
           aut, nihil nemo placeat laborum.
         </p>
-        <section>
+        <section className="flex flex-col items-center justify-center">
           <h4 className="text-center text-2xl border">Meet the team</h4>
-          <div className="flex justify-center items-center border border-black">
+          <div className="flex justify-center w-[50%] items-center border border-black">
             {workerRecords &&
               workerRecords.map((workerRecord) => {
                 return (
-                  <div key={workerRecord.id} className="mx-4">
+                  <div key={workerRecord.id} className="inline-block">
                     <OurWorkers
                       name={workerRecord.Name}
                       comment={workerRecord.comment}

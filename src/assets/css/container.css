@@ -1,5 +1,5 @@
 .navLink:hover {
-    background:#00fd00;
+    background:#01d201;
     color: white;
     /* #00fd00 */
   }
@@ -10,6 +10,7 @@
   }
   
   .navLink {
+    color: #01d201;
     padding: 8px;
     /* outline: 2px solid black; */
   }
