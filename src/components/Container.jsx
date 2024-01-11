@@ -63,18 +63,12 @@ const Container = () => {
         </p>
         <section className="flex flex-col items-center justify-center">
           <h4 className="text-center text-2xl border">Meet the team</h4>
-          <div className="flex justify-center w-[50%] items-center border border-black">
-            {workerRecords &&
-              workerRecords.map((workerRecord) => {
-                return (
-                  <div key={workerRecord.id} className="inline-block">
-                    <OurWorkers
-                      name={workerRecord.Name}
-                      comment={workerRecord.comment}
-                    />
-                  </div>
-                );
-              })}
+          <div className="border border-black w-[500px] text-center">
+            <OurWorkers/>
+            <OurWorkers/>
+            <OurWorkers/>
+            <OurWorkers/>
+            <OurWorkers/>
           </div>
         </section>
 

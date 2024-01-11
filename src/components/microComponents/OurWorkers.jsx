@@ -1,28 +1,22 @@
-// import styles from "../../assets/css/OurWorkers.module.css";
-import PropTypes from 'prop-types';
-const OurWorkers = (props) => {
+import styles from '../../assets/css/OurWorkers.module.css'
+import img from '../../assets/images/pic3.jpg'
+import PropTypes from 'prop-types'
+const OurWorkers = () => {
   return (
-    <div className={"testimonialCard"}>
-      <div className="cardInfo">
-        <div className="name text-center">
-          <div className="fName text-3xl">{props.name}</div>
-          <div className="lName text-xl font-bold">Doe</div>
-        </div>
-        <div className="nameInfo p-2">
-          {props.comment}
-        </div>
-        <div className="nameSocial flex justify-between px-2">
-          <a href="http://">linkedln</a>
-          <a href="">twitter</a>
-          <a href="">instagram</a>
+    <div className={styles.card}>
+      <img src={img} alt="" height={'200px'} width={'200px'} className='cardImage'/>
+      <div className="cardInformation">
+        <div className="cardName">
+          <div className="cardFirstName">John</div>
+          <div className="cardLastName">Doe</div>
+          <div className="cardTitle">Head Manager</div>
         </div>
       </div>
     </div>
-  );
-};
-OurWorkers.propTypes ={
-  'name':PropTypes.string,
-  'comment':PropTypes.string
+  )
 }
+OurWorkers.propTypes ={
+  name: PropTypes.string,
 
-export default OurWorkers;
+}
+export default OurWorkers

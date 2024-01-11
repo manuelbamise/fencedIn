@@ -21,35 +21,8 @@
     background-repeat: no-repeat;
   }
   
-  .testimonialCard {
-    background: url(../images/pic4.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 17rem;
-    border: 2px solid black;
-    width: 13rem;
-    border-radius: 5px;
-  }
-  
-  .cardInfo {
-    display: none;
-  }
-  
-  .testimonialCard:hover > .cardInfo {
-    color: white;
-    display: block;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-  }
+
   
   
-  .hide{
-    display: none;
-  }
-  .cardShow{
-    display: block;
-  }
+ 
   
