@@ -1,23 +1,27 @@
 [
-    {
-        "id":1,
-        "Name":"Emmanuel",
-        "comment":"I actually enjoy coding alot",
-        "Interests":["volleying,coding,running,games"]
-    },{
-        "id":2,
-        "Name":"Jose",
-        "Age":18,
-        "Interests":["videos,self-improvement,men's health"]
-    },{
-        "id":3,
-        "Name":"Jacob",
-        "comment":"what is there not to enjoy in anime",
-        "link":"./images/pic3.jpg"
-    },{
-        "id":4,
-        "Name":"David",
-        "comment":"I agree anime is goated",
-        "Interests":["Snorkelling,diving,aclamatising"]
-    }
+  {
+    "id": 1,
+    "fName": "Emmanuel",
+    "lName": "Oluwabamise",
+    "title": "CMO/Head of operations",
+    "imgLink":"../images/pic3.jpg"
+  },
+  {
+    "id": 2,
+    "fName": "Jane",
+    "lName": "Doe",
+    "title": "Chief Branch Manager"
+  },
+  {
+    "id": 1,
+    "fName": "Jason",
+    "lName": "Bourne",
+    "title": "Head of Media analysis"
+  },
+  {
+    "id": 1,
+    "fName": "John",
+    "lName": "Doe",
+    "title": " Head of Promotions"
+  }
 ]

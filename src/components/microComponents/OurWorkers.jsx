@@ -1,22 +1,24 @@
 import styles from '../../assets/css/OurWorkers.module.css'
-import img from '../../assets/images/pic3.jpg'
+// import img from '../../assets/images/pic3.jpg'
 import PropTypes from 'prop-types'
-const OurWorkers = () => {
+const OurWorkers = (props) => {
   return (
     <div className={styles.card}>
-      <img src={img} alt="" height={'200px'} width={'200px'} className='cardImage'/>
-      <div className="cardInformation">
-        <div className="cardName">
-          <div className="cardFirstName">John</div>
-          <div className="cardLastName">Doe</div>
-          <div className="cardTitle">Head Manager</div>
+      <img src={props.image} alt="workerProfilePic"  className={styles.cardImage}/>
+      <div className={styles.cardInformation}>
+        <div className={styles.cardName}>
+          <div className={styles.cardFirstName}>{props.fName}</div>
+          <div className={styles.cardLastName}>{props.lName}</div>
+          <div className={styles.cardTitle}>{props.title}</div>
         </div>
       </div>
     </div>
   )
 }
 OurWorkers.propTypes ={
-  name: PropTypes.string,
-
+  fName: PropTypes.string,
+  lName: PropTypes.string,
+  title: PropTypes.string,
+  image: PropTypes.any,
 }
 export default OurWorkers

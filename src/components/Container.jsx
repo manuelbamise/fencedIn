@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 const Container = () => {
   const [workers, setWorkers] = useState([]);
 
-
   return (
     <>
       {/* navigation bar */}
@@ -62,13 +61,21 @@ const Container = () => {
           aut, nihil nemo placeat laborum.
         </p>
         <section className="flex flex-col items-center justify-center">
-          <h4 className="text-center text-2xl border">Meet the team</h4>
-          <div className="border border-black w-[500px] text-center">
-            <OurWorkers/>
-            <OurWorkers/>
-            <OurWorkers/>
-            <OurWorkers/>
-            <OurWorkers/>
+          <h4 className="text-center text-2xl border w-full">Meet the team</h4>
+          <div className="border border-black w-[80rem] text-center">
+            {workerRecords && workerRecords
+              ? workerRecords.map((record) => {
+                  return (
+                    <OurWorkers
+                      key={record.id}
+                      fName={record.fName}
+                      lName={record.lName}
+                      title={record.title}
+                      image={record.imgLink}
+                    />
+                  );
+                })
+              : "noDataOnWorkers"}
           </div>
         </section>
 

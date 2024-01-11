@@ -1,6 +1,41 @@
 .card{
-    outline: 2px solid red;
-    margin: 7px ;
-    display: inline-block;
     
+    /* outline: 2px solid red; */
+    margin: 17px ;
+    display: inline-block;
+    border-radius: 5px;
+    height: 300px;
+    width: 200px;
+    box-shadow: 2px 3px 2px 3px  black;
+}
+
+.cardImage{
+    outline: 4px solid black;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 7px;
+}
+
+.cardInformation{
+    /* outline: 2px solid black; */
+    margin-top:30px;
+    
+}
+
+.cardName{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cardFirstName{
+    font-weight: 600;
+    font-size: larger;
+}
+
+.cardLastName{
+    font-size: medium;
+}
+.cardTitle{
+    font-style: italic;
 }
