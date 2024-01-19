@@ -4,10 +4,10 @@ import QuestionRow from "./microComponents/QuestionRow";
 import { Facebook, Instagram, Twitter } from "react-bootstrap-icons";
 import OurWorkers from "./microComponents/OurWorkers";
 import workerRecords from "../assets/json/ourWorkers.json";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const Container = () => {
-  const [workers, setWorkers] = useState([]);
+  // const [workers, setWorkers] = useState([]);
 
   return (
     <>
@@ -66,13 +66,15 @@ const Container = () => {
             {workerRecords && workerRecords
               ? workerRecords.map((record) => {
                   return (
-                    <OurWorkers
-                      key={record.id}
-                      fName={record.fName}
-                      lName={record.lName}
-                      title={record.title}
-                      image={record.imgLink}
-                    />
+                    <>
+                      <OurWorkers
+                        key={record.id}
+                        fName={record.fName}
+                        lName={record.lName}
+                        title={record.title}
+                        image={record.imgLink}
+                      />
+                    </>
                   );
                 })
               : "noDataOnWorkers"}

@@ -1,7 +1,8 @@
 import styles from '../../assets/css/OurWorkers.module.css'
-// import img from '../../assets/images/pic3.jpg'
 import PropTypes from 'prop-types'
+
 const OurWorkers = (props) => {
+  console.log(props.image);
   return (
     <div className={styles.card}>
       <img src={props.image} alt="workerProfilePic"  className={styles.cardImage}/>
