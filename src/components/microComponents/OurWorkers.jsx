@@ -1,8 +1,9 @@
+// import { useEffect } from 'react';
 import styles from '../../assets/css/OurWorkers.module.css'
 import PropTypes from 'prop-types'
 
+
 const OurWorkers = (props) => {
-  console.log(props.image);
   return (
     <div className={styles.card}>
       <img src={props.image} alt="workerProfilePic"  className={styles.cardImage}/>
@@ -20,6 +21,6 @@ OurWorkers.propTypes ={
   fName: PropTypes.string,
   lName: PropTypes.string,
   title: PropTypes.string,
-  image: PropTypes.any,
+  image: PropTypes.string,
 }
 export default OurWorkers
