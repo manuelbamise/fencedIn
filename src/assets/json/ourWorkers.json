@@ -4,27 +4,27 @@
     "fName": "Emmanuel",
     "lName": "Oluwabamise",
     "title": "CMO/Head of operations",
-    "imgLink":"src/public/workerImages/pic2.jpg"
+    "imgLink":"src/public/workerImages/worker2.jpg"
   },
   {
     "id": 2,
     "fName": "Jane",
     "lName": "Doe",
     "title": "Chief Branch Manager",
-    "imgLink":"src/public/workerImages/pic1.jpg"
+    "imgLink":"src/public/workerImages/worker4.jpeg"
   },
   {
-    "id": 1,
+    "id": 3,
     "fName": "Jason",
     "lName": "Bourne",
     "title": "Head of Media analysis",
-    "imgLink":"src/public/workerImages/pic6.jpg"
+    "imgLink":"src/public/workerImages/worker1.jpg"
   },
   {
-    "id": 1,
-    "fName": "John",
+    "id": 4,
+    "fName": "Janet",
     "lName": "Doe",
     "title": " Head of Promotions",
-    "imgLink":"src/public/workerImages/pic4.jpg"
+    "imgLink":"src/public/workerImages/worker3.jpg"
   }
 ]
