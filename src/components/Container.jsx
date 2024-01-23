@@ -4,6 +4,7 @@ import QuestionRow from "./microComponents/QuestionRow";
 import { Facebook, Instagram, Twitter } from "react-bootstrap-icons";
 import OurWorkers from "./microComponents/OurWorkers";
 import workerRecords from "../assets/json/ourWorkers.json";
+import PastProducts from "./microComponents/PastProducts";
 // import { useEffect, useState } from "react";
 
 const Container = () => {
@@ -112,6 +113,10 @@ const Container = () => {
             quisquam nesciunt assumenda, impedit a voluptates aliquam! Quae
             fugiat at corporis!
           </p>
+        </section>
+        <section>
+          {/* past product section */}
+          <PastProducts />
         </section>
         <section>
           {/* testimonials section */}

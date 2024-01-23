@@ -1,0 +1,17 @@
+.container{
+ border: 2px solid black;
+ height: 25rem;
+ width: 80rem;
+ margin: auto;
+ /* padding: ;    */
+}
+
+.toggleLevels{
+    color: lime;
+    border: 1px solid black;
+    background: black;
+    border-radius: 3px;
+    padding: 2px;
+    font-weight: 500;
+    margin: 2px;
+}
