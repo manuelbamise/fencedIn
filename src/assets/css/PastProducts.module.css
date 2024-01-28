@@ -5,13 +5,25 @@
  margin: auto;
  /* padding: ;    */
 }
-
-.toggleLevels{
+.toggleContainer{
+    outline:2px solid red;
+    text-align: center;
+    display: flex;
+    width: 40%;
+    margin: auto;
+    justify-content: space-around;
+}
+.activeToggleLevels{
     color: lime;
     border: 1px solid black;
     background: black;
     border-radius: 3px;
-    padding: 2px;
+    padding: 2px 3px;
     font-weight: 500;
-    margin: 2px;
+}
+.toggleLevels{
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2px 3px;
+    font-weight: 500;
 }

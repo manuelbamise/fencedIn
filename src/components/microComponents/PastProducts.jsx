@@ -1,13 +1,22 @@
-import style from '../../assets/css/PastProducts.module.css'
+import { useState } from "react";
+import style from "../../assets/css/PastProducts.module.css";
 
 const PastProducts = () => {
+  const [IsToggled, setIsToggled] = useState(true);
+
+  const handleToggle = () => {
+    setIsToggled(!IsToggled);
+  };
+
   return (
     <div className={style.container}>
-        <button className={style.toggleLevels}>Midrange</button>
-        <button>Flagship</button>
-        <button>Cheap</button>
+      <div className={style.toggleContainer}>
+        <button className={IsToggled? style.activeToggleLevels : style.toggleLevels} onClick={handleToggle}>Midrange</button>
+        <button className={IsToggled? style.activeToggleLevels : style.toggleLevels} onClick={handleToggle}>Flagship</button>
+        <button className={IsToggled? style.activeToggleLevels : style.toggleLevels} onClick={handleToggle}>Cheap</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default PastProducts
+export default PastProducts;
