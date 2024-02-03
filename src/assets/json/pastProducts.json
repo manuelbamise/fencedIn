@@ -1,6 +1,20 @@
 [
-    {
-        "id":1,
-        "imgLink":"src/public/productImages/product1.jpg"
-    }
+  {
+    "id": 1,
+    "imgLink": "src/public/productImages/product1.jpg"
+  },
+  {
+    "id": 2,
+    "imgLink": "src/public/productImages/product2.jpg"
+  },
+  {
+    "id": 3,
+    "imgLink": "src/public/productImages/product3.jpg"
+  },{
+    "id":4,
+    "imgLink":"src/public/productImages/product4.jpg"
+},{
+    "id":1,
+    "imgLink":"src/public/productImages/product1.jpg"
+}
 ]
