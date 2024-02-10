@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import { useState } from "react";
-import style from "../../assets/css/PastProducts.module.css";
+// import style from "../../assets/css/PastProducts.module.css";
 import productRecords from "../../assets/json/pastProducts.json";
 
 const PastProducts = () => {
@@ -22,34 +22,23 @@ const PastProducts = () => {
     },
   ]);
 
- 
+  const handleCheckType = ()=>{
+    let out = productRecords && productRecords.filter((object) =>{object.modelType == 'budget'} )
+
+    console.log(out);
+  };
+  
+ handleCheckType(productRecords)
   return (
-    <div className=" border-2 border-black h-96 w-[80rem] m-auto">
-      <div>
-        {toggleType &&
-          toggleType.map((btn) => {
-            return (
-              <button key={btn.id}>
-                {btn.name}
-              </button>
-            );
-          })}
-      </div>
-      <div className={style.productContainer}>
-        {productRecords &&
-          productRecords.map((record) => {
-            return (
-              <img
-                src={record.imgLink}
-                alt="image"
-                key={record.id}
-                className={style.product}
-              />
-            );
-          })}
-      </div>
-    </div>
-  );
+    <div>hello there</div>
+  //   <div className=" border-2 border-black h-96 w-[80rem] m-auto">
+  //     {
+  //       productRecords && productRecords.filter(record => {
+  //         record.modelType == "Midrange"
+  //       })
+  //     }
+  //   </div>
+ );
 };
 
 export default PastProducts;
