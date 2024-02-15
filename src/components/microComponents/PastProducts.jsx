@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import { useState } from "react";
-// import style from "../../assets/css/PastProducts.module.css";
+import style from "../../assets/css/PastProducts.module.css";
 import productRecords from "../../assets/json/pastProducts.json";
 
 const PastProducts = () => {
@@ -31,12 +31,12 @@ const PastProducts = () => {
   };
   return (
     <div className=" border-2 border-black h-96 w-[80rem] m-auto">
-      <div>
+      <div className="border flex justify-between w-optimal p-3 m-auto">
         {toggleBtn &&
           toggleBtn.map((item) => {
             return (
               <button
-                className=""
+                
                 onClick={() => filterItems(item.modelType)}
                 key={item.id}
               >
@@ -45,11 +45,11 @@ const PastProducts = () => {
             );
           })}
       </div>
-      <div className=" h-24 w-24 flex">
+      <div className="m-auto w-[80%] flex justify-center border-4 border-black">
         {filteredItems &&
           filteredItems.map((item) => {
             return (
-              <img src={item.imgLink} alt={item.modelType} key={item.id} />
+              <img src={item.imgLink} alt={item.modelType} className={style.image} key={item.id} />
             );
           })}
       </div>

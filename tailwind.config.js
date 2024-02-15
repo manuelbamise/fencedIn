@@ -10,6 +10,9 @@ export default {
         'stapleGreen':'#00fd00',
         'hoverStaple':'#01d201'
       },
+      width:{
+        'optimal':'50%'
+      }
     },
   },
   plugins: [],
