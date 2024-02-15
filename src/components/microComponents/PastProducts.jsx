@@ -4,41 +4,57 @@ import { useState } from "react";
 import productRecords from "../../assets/json/pastProducts.json";
 
 const PastProducts = () => {
-  const [toggleType, setToggletype] = useState([
+  const toggleBtn = [
     {
       id: 1,
-      name: "Budget",
-      state: true,
+      Name: "Budget",
+      modelType: "budget",
     },
     {
       id: 2,
-      name: "Midrange",
-      state: false,
+      Name: "Midrange",
+      modelType: "midRange",
     },
     {
       id: 3,
-      name: "Flagship",
-      state: false,
+      Name: "Flagship",
+      modelType: "flagShip",
     },
-  ]);
+  ];
+  const [filteredItems, setFilteredItems] = useState(productRecords);
 
-  const handleCheckType = ()=>{
-    let out = productRecords && productRecords.filter((object) =>{object.modelType == 'budget'} )
-
-    console.log(out);
+  const filterItems = (category) => {
+    const filteredResults = productRecords.filter(
+      (item) => item.modelType === category
+    );
+    setFilteredItems(filteredResults);
   };
-  
- handleCheckType(productRecords)
   return (
-    <div>hello there</div>
-  //   <div className=" border-2 border-black h-96 w-[80rem] m-auto">
-  //     {
-  //       productRecords && productRecords.filter(record => {
-  //         record.modelType == "Midrange"
-  //       })
-  //     }
-  //   </div>
- );
+    <div className=" border-2 border-black h-96 w-[80rem] m-auto">
+      <div>
+        {toggleBtn &&
+          toggleBtn.map((item) => {
+            return (
+              <button
+                className=""
+                onClick={() => filterItems(item.modelType)}
+                key={item.id}
+              >
+                {item.Name}
+              </button>
+            );
+          })}
+      </div>
+      <div className=" h-24 w-24 flex">
+        {filteredItems &&
+          filteredItems.map((item) => {
+            return (
+              <img src={item.imgLink} alt={item.modelType} key={item.id} />
+            );
+          })}
+      </div>
+    </div>
+  );
 };
 
 export default PastProducts;
