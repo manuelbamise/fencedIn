@@ -1,5 +1,4 @@
-// import { useState } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "../../assets/css/PastProducts.module.css";
 import productRecords from "../../assets/json/pastProducts.json";
 
@@ -9,6 +8,7 @@ const PastProducts = () => {
       id: 1,
       Name: "Budget",
       modelType: "budget",
+      status: "active",
     },
     {
       id: 2,
@@ -21,25 +21,33 @@ const PastProducts = () => {
       modelType: "flagShip",
     },
   ];
-  const [filteredItems, setFilteredItems] = useState(productRecords);
 
-  const filterItems = (category) => {
-    const filteredResults = productRecords.filter(
-      (item) => item.modelType === category
-    );
-    setFilteredItems(filteredResults);
-  };
+  const [activebtn, setactivebtn] = useState(toggleBtn.id = 1)
+  const [filteredItems, setFilteredItems] = useState([]);
+
+ 
+  useEffect(()=>{
+    const filterItems = () => {
+      const filteredResults = productRecords.filter(
+        (item) => item.modelType === activebtn
+      );
+      setFilteredItems(filteredResults);
+    };
+  
+    filterItems()
+  },[activebtn]);
+
+  const handleButtonClick=(buttontype)=>{
+      setactivebtn(buttontype)
+  }
+
   return (
-    <div className=" border-2 border-black h-96 w-[80rem] m-auto">
+    <div className=" border-2 border-black h-96 w-[80rem] m-auto" id="productContainer">
       <div className="border flex justify-between w-optimal p-3 m-auto">
         {toggleBtn &&
           toggleBtn.map((item) => {
             return (
-              <button
-                
-                onClick={() => filterItems(item.modelType)}
-                key={item.id}
-              >
+              <button onClick={() => handleButtonClick(item.modelType)} key={item.id}>
                 {item.Name}
               </button>
             );
@@ -49,7 +57,12 @@ const PastProducts = () => {
         {filteredItems &&
           filteredItems.map((item) => {
             return (
-              <img src={item.imgLink} alt={item.modelType} className={style.image} key={item.id} />
+              <img
+                src={item.imgLink}
+                alt={item.modelType}
+                className={style.image}
+                key={item.id}
+              />
             );
           })}
       </div>
