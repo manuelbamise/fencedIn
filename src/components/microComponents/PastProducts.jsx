@@ -22,32 +22,38 @@ const PastProducts = () => {
     },
   ];
 
-  const [activebtn, setactivebtn] = useState(toggleBtn.id = 1)
+  const [activebtn, setactivebtn] = useState("budget");
   const [filteredItems, setFilteredItems] = useState([]);
 
- 
-  useEffect(()=>{
+  useEffect(() => {
     const filterItems = () => {
       const filteredResults = productRecords.filter(
         (item) => item.modelType === activebtn
       );
       setFilteredItems(filteredResults);
     };
-  
-    filterItems()
-  },[activebtn]);
 
-  const handleButtonClick=(buttontype)=>{
-      setactivebtn(buttontype)
-  }
+    filterItems();
+  }, [activebtn]);
+
+  const handleButtonClick = (buttontype) => {
+    setactivebtn(buttontype);
+  };
 
   return (
-    <div className=" border-2 border-black h-96 w-[80rem] m-auto" id="productContainer">
+    <div
+      className=" border-2 border-black h-96 w-[80rem] m-auto"
+      id="productContainer"
+    > 
       <div className="border flex justify-between w-optimal p-3 m-auto">
         {toggleBtn &&
           toggleBtn.map((item) => {
             return (
-              <button onClick={() => handleButtonClick(item.modelType)} key={item.id}>
+              <button
+                onClick={() => handleButtonClick(item.modelType)}
+                key={item.id}
+                className={activebtn === item.modelType ? 'ring-2 ring-stapleGreen p-2 rounded ' : 'bg-black font-bold p-2 rounded text-white hover:bg-stapleGreen hover:p-2 hover:rounded'}
+              >
                 {item.Name}
               </button>
             );

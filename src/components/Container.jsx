@@ -41,7 +41,7 @@ const Container = () => {
         <section className="flex items-center justify-center p-2">
           <a
             href="#aboutSection"
-            className="rounded-xl p-2 text-xl hover:rounded hover:ring bg-black text-stapleGreen hover:ring-black hover:bg-stapleGreen  hover:text-white"
+            className="rounded-xl p-2 text-xl hover:rounded  bg-black text-white  hover:bg-stapleGreen  hover:text-white"
           >
             Welcome
           </a>
@@ -116,6 +116,7 @@ const Container = () => {
         </section>
         <section>
           {/* past product section */}
+          <h3 className="text-2xl text-center">Our Products</h3>
           <PastProducts />
         </section>
         <section>
