@@ -3,12 +3,12 @@ import style from "../../assets/css/PastProducts.module.css";
 import productRecords from "../../assets/json/pastProducts.json";
 
 const PastProducts = () => {
+  // List of button properties to be rendered on the page
   const toggleBtn = [
     {
       id: 1,
       Name: "Budget",
       modelType: "budget",
-      status: "active",
     },
     {
       id: 2,
@@ -22,21 +22,25 @@ const PastProducts = () => {
     },
   ];
 
-  const [activebtn, setactivebtn] = useState("budget");
+  const [activebtn, setactivebtn] = useState("budget");//sets the default button to budget
   const [filteredItems, setFilteredItems] = useState([]);
 
   useEffect(() => {
+    // the code in this function filters through a list of data to be rendered on the page
+    // as soon as the state of the activebtn changes
     const filterItems = () => {
-      const filteredResults = productRecords.filter(
+      const filteredResults = productRecords.filter(//filters through the data and stores it in a new variable
         (item) => item.modelType === activebtn
       );
       setFilteredItems(filteredResults);
     };
+    
 
     filterItems();
   }, [activebtn]);
 
   const handleButtonClick = (buttontype) => {
+    //sets parameter(buttontype) as activebtn
     setactivebtn(buttontype);
   };
 
@@ -48,7 +52,7 @@ const PastProducts = () => {
       <div className="border flex justify-between w-optimal p-3 m-auto">
         {toggleBtn &&
           toggleBtn.map((item) => {
-            return (
+            return (//renders button onto the page
               <button
                 onClick={() => handleButtonClick(item.modelType)}
                 key={item.id}
@@ -62,7 +66,7 @@ const PastProducts = () => {
       <div className="m-auto w-[80%] flex justify-center border-4 border-black">
         {filteredItems &&
           filteredItems.map((item) => {
-            return (
+            return (//renders filtered data onto the page
               <img
                 src={item.imgLink}
                 alt={item.modelType}
