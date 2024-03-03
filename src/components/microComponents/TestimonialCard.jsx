@@ -1,21 +1,27 @@
+import testimonial from "../../assets/json/testimonials.json";
+
 const TestimonialCard = () => {
   return (
     <div className="testimonialCard">
-      <div className="cardInfo">
-        <div className="name text-center">
-          <div className="fName text-3xl">John</div>
-          <div className="lName text-xl font-bold">Doe</div>
-        </div>
-        <div className="nameInfo p-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          qui error nulla.
-        </div>
-        <div className="nameSocial flex justify-between px-2">
-          <a href="http://">linkedln</a>
-          <a href="">twitter</a>
-          <a href="">instagram</a>
-        </div>
-      </div>
+      {testimonial && testimonial 
+      ? testimonial.map((item)=>{
+        return(
+          <div key={item.id}>
+            <div>
+              <div>{item.firstName}</div>
+              <div>{item.lastName}</div>
+            </div>
+            <div>
+              {item.testimonial}
+            </div>
+            <div>
+              <a href={item.linkedinUrl}>Linkedin</a>
+              <a href={item.twitterUrl}>Twitter</a>
+              <a href={item.instagramUrl}>Instagram</a>
+            </div>
+          </div>
+        ) 
+      }) : "No records found"}
     </div>
   );
 };
